@@ -9,12 +9,12 @@ import piece5 from '@/assets/piece-5.jpg';
 import piece6 from '@/assets/piece-6.jpg';
 
 const pieces = [
-  { id: 1, name: 'Obsidian Jacket', collection: 'Chapter I — SEEN', description: 'Structured leather silhouette with sculptural shoulders', year: '2024', image: piece1, category: 'Garments' },
-  { id: 2, name: 'Authority Boot', collection: 'Chapter III — AUTHORITY', description: 'Architectural heel construction in full-grain leather', year: '2024', image: piece2, category: 'Footwear' },
-  { id: 3, name: 'Noir Drape Gown', collection: 'Chapter I — SEEN', description: 'Flowing silk with asymmetric draping and sweetheart neckline', year: '2023', image: piece3, category: 'Couture' },
-  { id: 4, name: 'Clasp Tote', collection: 'Chapter II — UNBOXED', description: 'Soft leather with sculptural gold hardware', year: '2024', image: piece4, category: 'Accessories' },
-  { id: 5, name: 'Bone & Shadow', collection: 'Chapter II — UNBOXED', description: 'Experimental deconstruction exploring textile boundaries', year: '2023', image: piece5, category: 'Experimental' },
-  { id: 6, name: 'Open Blazer Set', collection: 'Chapter III — AUTHORITY', description: 'Tailored precision with African-inspired construction', year: '2024', image: piece6, category: 'Garments' },
+  { id: 1, name: 'Obsidian Trousers', collection: 'Chapter I — SEEN', description: 'Sculpted tailoring with architectural seam lines and a commanding silhouette', year: '2024', image: piece1, category: 'Garments', comingSoon: false },
+  { id: 2, name: 'Authority Boot', collection: 'Chapter III — AUTHORITY', description: 'Architectural heel construction in full-grain leather', year: '2024', image: piece2, category: 'Footwear', comingSoon: true },
+  { id: 3, name: 'Noir Drape Gown', collection: 'Chapter I — SEEN', description: 'Flowing silk with asymmetric draping and sweetheart neckline', year: '2023', image: piece3, category: 'Couture', comingSoon: true },
+  { id: 4, name: 'Clasp Tote', collection: 'Chapter II — UNBOXED', description: 'Soft leather with sculptural gold hardware', year: '2024', image: piece4, category: 'Accessories', comingSoon: true },
+  { id: 5, name: 'Bone & Shadow', collection: 'Chapter II — UNBOXED', description: 'Experimental deconstruction exploring textile boundaries', year: '2023', image: piece5, category: 'Experimental', comingSoon: true },
+  { id: 6, name: 'Open Blazer Set', collection: 'Chapter III — AUTHORITY', description: 'Tailored precision with African-inspired construction', year: '2024', image: piece6, category: 'Garments', comingSoon: true },
 ];
 
 const categories = ['All', 'Couture', 'Garments', 'Footwear', 'Accessories', 'Experimental'];
