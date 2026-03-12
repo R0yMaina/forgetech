@@ -75,21 +75,30 @@ export default function PortfolioGallery() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              onClick={() => setLightbox(piece.id)}
-              className="group cursor-pointer relative overflow-hidden aspect-[3/4] bg-card"
+              onClick={() => !piece.comingSoon && setLightbox(piece.id)}
+              className={`group relative overflow-hidden aspect-[3/4] bg-card ${piece.comingSoon ? 'cursor-default' : 'cursor-pointer'}`}
             >
               <img
                 src={piece.image}
                 alt={piece.name}
-                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                className={`w-full h-full object-cover transition-transform duration-1000 ${piece.comingSoon ? 'grayscale opacity-40' : 'group-hover:scale-105'}`}
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-background/0 group-hover:bg-background/60 transition-all duration-700" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-700">
-                <p className="text-ui text-metallic mb-2">{piece.category} — {piece.year}</p>
-                <h3 className="text-editorial text-2xl text-foreground mb-1">{piece.name}</h3>
-                <p className="text-sm text-muted-foreground">{piece.description}</p>
-              </div>
+              {piece.comingSoon && (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="text-ui text-foreground/70 tracking-[0.3em] text-sm border border-foreground/20 px-6 py-3">COMING SOON</span>
+                </div>
+              )}
+              {!piece.comingSoon && (
+                <>
+                  <div className="absolute inset-0 bg-background/0 group-hover:bg-background/60 transition-all duration-700" />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-700">
+                    <p className="text-ui text-metallic mb-2">{piece.category} — {piece.year}</p>
+                    <h3 className="text-editorial text-2xl text-foreground mb-1">{piece.name}</h3>
+                    <p className="text-sm text-muted-foreground">{piece.description}</p>
+                  </div>
+                </>
+              )}
             </motion.div>
           ))}
         </AnimatePresence>
