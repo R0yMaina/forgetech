@@ -28,19 +28,23 @@ export default function AboutSection() {
           transition={{ duration: 1, delay: 0.2 }}
         >
           <p className="text-ui text-metallic mb-4">The Vision</p>
-          <h2 className="text-editorial text-4xl md:text-5xl text-foreground mb-8">
+          <h2 className="text-editorial text-4xl md:text-5xl text-foreground mb-4">
             About Faces101
           </h2>
+          <p className="text-editorial text-xl text-metallic italic mb-8">
+            Born Here. Worn Everywhere.
+          </p>
           <div className="space-y-6 text-muted-foreground leading-relaxed">
             <p>
-              Faces101 is a luxury fashion house rooted in African identity, 
-              cultural storytelling, and rebellion against conformity. Every piece 
-              is a statement — crafted with precision, designed with purpose.
+              Faces101 is a luxury fashion house born from the streets of Nairobi — 
+              rooted in African identity, cultural storytelling, and rebellion against 
+              conformity. Every piece is a statement — crafted with precision, designed 
+              with purpose.
             </p>
             <p>
-              Our work exists at the intersection of sculptural drama and minimal 
-              brutalism. We don't follow trends — we create narratives through 
-              fabric, form, and fearless design.
+              From Nairobi to the world, our work exists at the intersection of 
+              sculptural drama and minimal brutalism. We don't follow trends — we 
+              create narratives through fabric, form, and fearless design.
             </p>
             <p>
               From couture gowns to experimental concepts, each collection 
