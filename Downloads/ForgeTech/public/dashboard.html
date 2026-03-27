@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ForgeTech Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #04040a;
+      --indigo: #6C63FF;
+      --orange: #FF6B35;
+      --white: #f0eeff;
+      --muted: #7a7a9a;
+      --glass: rgba(255,255,255,0.04);
+      --glass-border: rgba(108,99,255,0.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    #login-overlay {
+      position: fixed; inset: 0; background: var(--bg); z-index: 9999;
+      display: flex; align-items: center; justify-content: center;
+      backdrop-filter: blur(20px);
+    }
+    .login-box {
+      background: rgba(10,10,20,0.85);
+      border: 1px solid var(--glass-border);
+      padding: 40px; border-radius: 24px; text-align: center; max-width: 400px; width: 90%;
+    }
+    .input-field {
+      width: 100%; border-radius: 12px; border: 1px solid var(--glass-border);
+      background: var(--glass); color: white; padding: 14px; margin: 20px 0; outline: none;
+    }
+    .btn {
+      background: var(--orange); color: white; padding: 14px 30px; border: none; border-radius: 100px;
+      cursor: pointer; font-weight: 700; transition: transform 0.2s; width: 100%;
+    }
+    .btn:hover { transform: scale(1.02); }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; display: none; }
+    .header { margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; }
+    .header h1 { font-family: 'Bebas Neue', cursive; font-size: 3rem; letter-spacing: 2px; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; margin-bottom: 40px; }
+    .stat-card {
+      background: var(--glass); border: 1px solid var(--glass-border); padding: 30px; border-radius: 20px;
+      position: relative; overflow: hidden;
+    }
+    .stat-card::after {
+      content: ''; position: absolute; top: 0; right: 0; width: 100px; height: 100px;
+      background: radial-gradient(circle, rgba(108,99,255,0.08) 0%, transparent 70%); pointer-events: none;
+    }
+    .stat-label { font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .stat-value { font-family: 'Bebas Neue', cursive; font-size: 3.5rem; color: var(--orange); margin: 10px 0; }
+
+    .tables-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .table-section h2 { font-family: 'Bebas Neue', cursive; font-size: 2rem; margin-bottom: 20px; color: var(--white); }
+    .table-card {
+      background: var(--glass); border: 1px solid var(--glass-border); border-radius: 20px; overflow-x: auto;
+    }
+    table { width: 100%; border-collapse: collapse; min-width: 400px; }
+    th { text-align: left; padding: 16px; font-size: 0.8rem; color: var(--muted); text-transform: uppercase; border-bottom: 1px solid var(--glass-border); }
+    td { padding: 16px; font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.03); color: var(--white); }
+    tr:last-child td { border: none; }
+    .badge { padding: 4px 10px; border-radius: 100px; font-size: 0.7rem; font-weight: 700; background: var(--indigo); color: white; }
+
+    @media (max-width: 1024px) { .tables-container { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div id="login-overlay">
+  <div class="login-box">
+    <h1 style="font-family:'Bebas Neue'; font-size:3rem; margin-bottom:10px;">ForgeTech AI Dashboard</h1>
+    <p style="color:var(--muted); font-size:0.9rem;">Protected Administrator Access Only</p>
+    <input type="password" id="admin-pass" class="input-field" placeholder="Dashboard Secret Password">
+    <button class="btn" onclick="login()">Enter Forge System →</button>
+  </div>
+</div>
+
+<div class="container" id="dashboard">
+  <div class="header">
+    <h1>System Status</h1>
+    <button class="btn" style="width:auto; padding: 10px 20px; background: transparent; border:1px solid var(--glass-border);" onclick="logout()">Logout</button>
+  </div>
+
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">Web Visits</div>
+      <div id="stat-visits" class="stat-value">0</div>
+      <div style="font-size:0.75rem; color:var(--muted)">Tracking active since launch</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Project Inquiries</div>
+      <div id="stat-contacts" class="stat-value">0</div>
+      <div style="font-size:0.75rem; color:var(--muted)">Client leads for ForgeTech</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-label">Subscribers</div>
+      <div id="stat-subs" class="stat-value">0</div>
+      <div style="font-size:0.75rem; color:var(--muted)">Active growth list members</div>
+    </div>
+  </div>
+
+  <div class="tables-container">
+    <div class="table-section">
+      <h2>Recent Inquiries</h2>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr><th>Client</th><th>Service</th><th>Date</th></tr>
+          </thead>
+          <tbody id="contacts-table"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="table-section">
+      <h2>Recent Newsletter Subs</h2>
+      <div class="table-card">
+        <table>
+          <thead>
+            <tr><th>Email</th><th>Date</th></tr>
+          </thead>
+          <tbody id="subs-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  let adminPassword = localStorage.getItem('forge_secret');
+  if (adminPassword) {
+    document.getElementById('login-overlay').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+    loadStats();
+  }
+
+  function login() {
+    const pass = document.getElementById('admin-pass').value;
+    localStorage.setItem('forge_secret', pass);
+    window.location.reload();
+  }
+  function logout() {
+    localStorage.removeItem('forge_secret');
+    window.location.reload();
+  }
+
+  async function loadStats() {
+    const pass = localStorage.getItem('forge_secret');
+    try {
+      const res = await fetch('/api/admin/stats', {
+        headers: { 'x-admin-password': pass }
+      });
+      if (res.status === 401) {
+        alert('Unauthorized! Incorrect Password.');
+        logout();
+        return;
+      }
+      const data = await res.json();
+      
+      document.getElementById('stat-visits').textContent = data.counts.visits;
+      document.getElementById('stat-contacts').textContent = data.counts.contacts;
+      document.getElementById('stat-subs').textContent = data.counts.subscribers;
+
+      const contactHtml = data.recent.contacts.map(c => `
+        <tr>
+          <td><strong>${c.fullName}</strong><div style="font-size:0.7rem; color:var(--muted)">${c.email}</div></td>
+          <td><span class="badge">${c.serviceType || 'General'}</span></td>
+          <td>${new Date(c.date).toLocaleDateString()}</td>
+        </tr>
+      `).join('');
+      document.getElementById('contacts-table').innerHTML = contactHtml;
+
+      const subHtml = data.recent.subscribers.map(s => `
+        <tr>
+          <td>${s.email}</td>
+          <td>${new Date(s.date).toLocaleDateString()}</td>
+        </tr>
+      `).join('');
+      document.getElementById('subs-table').innerHTML = subHtml;
+
+    } catch (err) {
+      console.error(err);
+      alert('Error fetching statistics.');
+    }
+  }
+</script>
+</body>
+</html>
