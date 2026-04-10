@@ -1,0 +1,92 @@
+npm verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+npm info using npm@11.3.0
+npm info using node@v24.1.0
+npm verbose title npm install
+npm verbose argv "install" "--loglevel" "verbose" "--no-audit" "--no-fund"
+npm verbose logfile logs-max:10 dir:C:\Users\User\AppData\Local\npm-cache\_logs\2026-03-31T21_39_53_269Z-
+npm verbose logfile C:\Users\User\AppData\Local\npm-cache\_logs\2026-03-31T21_39_53_269Z-debug-0.log
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-win32-ia32-msvc
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-win32-arm64-msvc
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-openharmony-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-openbsd-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-x64-musl
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-x64-gnu
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-s390x-gnu
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-riscv64-musl
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-riscv64-gnu
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-ppc64-musl
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-ppc64-gnu
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-loong64-musl
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-loong64-gnu
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-arm64-musl
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-arm64-gnu
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-arm-musleabihf
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-freebsd-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-linux-arm-gnueabihf
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-freebsd-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-darwin-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-darwin-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-android-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@rollup\rollup-android-arm-eabi
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\win32-ia32
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\openharmony-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\win32-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\sunos-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\openbsd-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\openbsd-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\netbsd-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\netbsd-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-s390x
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-riscv64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-ppc64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-loong64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-mips64el
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-ia32
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\linux-arm
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\freebsd-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\freebsd-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\darwin-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\darwin-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\android-x64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\android-arm
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\android-arm64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\@esbuild\aix-ppc64
+npm verbose reify failed optional dependency C:\Users\User\OneDrive\Desktop\forgetech1.0\app\node_modules\fsevents
+npm http cache which@https://registry.npmjs.org/which/-/which-2.0.2.tgz 3ms (cache hit)
+npm http cache vite@https://registry.npmjs.org/vite/-/vite-7.3.0.tgz 0ms (cache hit)
+npm http cache update-browserslist-db@https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.2.3.tgz 0ms (cache hit)
+npm http cache @babel/parser@https://registry.npmjs.org/@babel/parser/-/parser-7.29.2.tgz 0ms (cache hit)
+npm http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.9.3.tgz 0ms (cache hit)
+npm http cache tailwindcss@https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.4.19.tgz 0ms (cache hit)
+npm http cache semver@https://registry.npmjs.org/semver/-/semver-6.3.1.tgz 0ms (cache hit)
+npm http cache rollup@https://registry.npmjs.org/rollup/-/rollup-4.55.1.tgz 0ms (cache hit)
+npm http cache sucrase@https://registry.npmjs.org/sucrase/-/sucrase-3.35.1.tgz 0ms (cache hit)
+npm http cache resolve@https://registry.npmjs.org/resolve/-/resolve-1.22.11.tgz 0ms (cache hit)
+npm http cache regjsparser@https://registry.npmjs.org/regjsparser/-/regjsparser-0.13.0.tgz 0ms (cache hit)
+npm http cache loose-envify@https://registry.npmjs.org/loose-envify/-/loose-envify-1.4.0.tgz 0ms (cache hit)
+npm http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz 0ms (cache hit)
+npm http cache jsesc@https://registry.npmjs.org/jsesc/-/jsesc-3.1.0.tgz 0ms (cache hit)
+npm http cache json5@https://registry.npmjs.org/json5/-/json5-2.2.3.tgz 0ms (cache hit)
+npm http cache js-yaml@https://registry.npmjs.org/js-yaml/-/js-yaml-4.1.1.tgz 0ms (cache hit)
+npm http cache eslint@https://registry.npmjs.org/eslint/-/eslint-9.39.2.tgz 0ms (cache hit)
+npm http cache esbuild@https://registry.npmjs.org/esbuild/-/esbuild-0.27.2.tgz 16ms (cache hit)
+npm http cache cssesc@https://registry.npmjs.org/cssesc/-/cssesc-3.0.0.tgz 0ms (cache hit)
+npm http cache cross-env@https://registry.npmjs.org/cross-env/-/cross-env-7.0.3.tgz 0ms (cache hit)
+npm http cache baseline-browser-mapping@https://registry.npmjs.org/baseline-browser-mapping/-/baseline-browser-mapping-2.9.11.tgz 0ms (cache hit)
+npm http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.3.tgz 0ms (cache hit)
+npm http cache browserslist@https://registry.npmjs.org/browserslist/-/browserslist-4.28.1.tgz 0ms (cache hit)
+npm http cache jiti@https://registry.npmjs.org/jiti/-/jiti-1.21.7.tgz 0ms (cache hit)
+npm http cache autoprefixer@https://registry.npmjs.org/autoprefixer/-/autoprefixer-10.4.23.tgz 0ms (cache hit)
+npm http cache acorn@https://registry.npmjs.org/acorn/-/acorn-8.15.0.tgz 0ms (cache hit)
+npm info run esbuild@0.27.2 postinstall node_modules/esbuild node install.js
+npm info run esbuild@0.27.2 postinstall { code: 0, signal: null }
+
+changed 75 packages in 21s
+npm verbose cwd C:\Users\User\OneDrive\Desktop\forgetech1.0\app
+npm verbose os Windows_NT 10.0.22631
+npm verbose node v24.1.0
+npm verbose npm  v11.3.0
+npm verbose exit 0
+npm info ok

@@ -1,0 +1,14 @@
+{
+  "name": "forgetech1.0",
+  "private": true,
+  "scripts": {
+    "dev": "cd app && npm run dev",
+    "build": "cd app && npm run build",
+    "preview": "cd app && npm run preview",
+    "deploy": "cd app && npm run build && npx gh-pages -d dist",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
